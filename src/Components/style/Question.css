@@ -1,0 +1,40 @@
+.question-wrapper {
+  width: 60%;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensure wrap on small screens */
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+  background-color: #673ab7;
+  color: #fff;
+}
+
+/* ✅ Responsive behavior */
+@media (max-width: 768px) {
+  .question-wrapper {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
+
+  .tab-buttons {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,144 @@
+.cheatsheet-container {
+  background: linear-gradient(to right, #f1f3f6, #eaf1fa);
+  border-radius: 16px;
+  padding: 24px;
+  width: 52%;
+  margin-top: -150px;
+  margin-left: 150px;
+}
+
+.cheatsheet-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cheatsheet-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+.cheatsheet-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.blurred-wrapper {
+  display: flex;
+  flex-direction: row;
+  filter: blur(2px);
+  pointer-events: none;
+  position: relative;
+  gap: 10px;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  min-height: 130px;
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card p {
+  font-size: 13px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.lock-icon {
+  font-size: 24px;
+  color: #6a1b9a;
+  margin-bottom: 6px;
+}
+
+.locked-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6a1b9a;
+}
+
+.locked-msg {
+  font-size: 16px;
+  color: #2a2626;
+  margin-top: 4px;
+}
+
+/* ✅ Responsive (Mobile / Tablet View) */
+@media (max-width: 768px) {
+  .cheatsheet-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 16px;
+  }
+
+  .cheatsheet-container h2 {
+    font-size: 20px;
+  }
+
+  .cheatsheet-container p {
+    font-size: 13px;
+  }
+
+  .cheatsheet-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .card {
+    width: 90%;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .blurred-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .lock-overlay {
+    padding: 12px 20px;
+  }
+
+  .locked-label,
+  .locked-msg {
+    font-size: 14px;
+  }
+
+  .lock-icon {
+    font-size: 20px;
+  }
+}
